@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        <!-- username,password,email,city,gender,skills,button -->
+        <!-- text,password,email,select,radio,checkbox,button,file,img,color,textarea -->
+        <form>
+            <label for="userName">UserName:</label>
+            <input type="text" id="userName" placeholder="Enter username"><br><br>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password"><br><br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter email"><br><br>
+
+            <label for="city">Select your city</label>
+            <select name="city" id="city">
+               
+                <option value="">Choose</option>
+                <optgroup label="Maharashtra">
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="">Thane</option>
+                    <option value="">Nasik</option>
+                </optgroup>
+                <optgroup label="Karnataka">
+                    <option value="">Banglore</option>
+                </optgroup>
+                <optgroup label="Gujrat">
+                    <option value="">Surat</option>
+                    <option value="">Vapi</option>
+            </optgroup>
+            </select><br><br>
+
+            <label for="comment">Enter your comments</label><br>
+            <textarea name="" id="comment" rows="4" cols="30" placeholder="Enter comments"></textarea>
+
+                  
+        </form>
+    </body>
+</html>
