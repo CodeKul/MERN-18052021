@@ -1,0 +1,63 @@
+.heading {
+  text-align: center;
+}
+
+nav {
+  position: sticky;
+  top:0;
+ 
+}
+.navbar {
+  height: 50px;
+  background: gray;
+}
+
+.navbar {
+  list-style-type: none;
+
+  display: flex;
+ justify-content: space-around;
+ align-items:center;
+  top: 25%;
+  padding-right: 70px;
+  
+}
+
+.navbar > li > a {
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+}
+
+.main {
+  padding: 10px;
+  font-size: 18px;
+  
+}
+.main-section{
+  display: flex;
+}
+
+
+.one {
+  padding: 10px;
+  background-color: lightgray;
+}
+
+.two {
+  padding: 10px;
+  background-color: darkgrey;
+}
+
+.three {
+  background-color: lightgray;
+  
+  padding: 5px;
+}
+
+.footer {
+  background: gray;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
