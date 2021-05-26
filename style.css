@@ -1,0 +1,13 @@
+h1 {
+  text-align: center;
+  color: brown
+}
+h1 {
+  text-align: left;
+  color: coral;
+}
+h1{
+    text-align: right;
+    color:darkgreen;
+    border:1px solid red;
+}
