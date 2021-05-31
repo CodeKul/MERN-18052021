@@ -7,44 +7,115 @@
     <title>Document</title>
     <style>
         /* Element selectors 
-            id -#,class - ., */
+            id selector -#,class selector - ., */
        /* #subheading1{
            color:firebrick;
        }
-
-       #subheading2{
+       
+        #subheading2{
            color:forestgreen;
        } */
 
-       .heading3{
+       /* .heading3{
             color:goldenrod;
             text-align: center;
             border:1px solid black;
+        } */
 
+        /* Grouping Selector - , */
+       h1, h3{
+           color:brown;
+           border:2px solid peru;
+           text-align:center;
        }
+    p.pOne{
+        font-size: 20px;
+    }
+    
+    /* h1#heading */
+
+
+    .section1{
+       border:10px solid black;
+    }
+
+     /* Combinator Selectors - 
+     1)descendant selector - space
+     2)child selector - >
+     3)adjacent sibling - +
+     4)general sibling - ~ */
+
+    .section1 div ul li span{
+        border:2px solid blueviolet;
+    }
+
+    .ulist ul li {
+       /* width:300px; */
+    }
+
+    .ulist ul{
+       width:300px;
+       border:2px solid green;
+    }
+
+    /* .section1 div .ulist{
+        border: 2px solid red;
+    } */
+
+    .ulist ul{
+        display:inline-flex;
+        /* justify-content: space-between; */
+    }
 
     </style>
 </head>
 <body>
-    <header>
+    <header class="">
         <h1 id="heading">Heading 1</h1>
     </header>
     <main>
-        <section>
-            <div>
-                <h3 id="subheading1" class="heading3">Learning Selectors</h3>
+        <section class="section1">
+            <div class="divOne">
+              <h3 id="subheading1" class="heading3">Learning Selectors</h3>
+              <div class="ulist">
                 <ul>
-                    <li>basic Selectors</li>
+                    <li><span>basic Selectors</span></li>
+                    <li>Descendent Selector</li>
+                    <li>Attribute Selector</li>
+                    <li>Pseudo Class</li>
+                    <li>Pseudo elements</li>
+                </ul>
+
+                <ul>
+                    <li><span>basic Selectors</span></li>
+                    <li>Descendent Selector</li>
+                    <li>Attribute Selector</li>
+                    <li>Pseudo Class</li>
+                    <li>Pseudo elements</li>
+                </ul>
+                <ul>
+                    <li><span>basic Selectors</span></li>
                     <li>Descendent Selector</li>
                     <li>Attribute Selector</li>
                     <li>Pseudo Class</li>
                     <li>Pseudo elements</li>
                 </ul>
             </div>
+            </div>
             <div>
                 <h3 id="subheading2" class="heading3">Description</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus excepturi, vitae debitis veniam itaque, nulla ipsam repudiandae voluptas explicabo vel quasi sit illo ullam saepe sapiente illum ipsum distinctio! Nisi assumenda, illo ipsa laboriosam facere voluptates amet quis nesciunt quasi eum odio sed, esse sit, officiis non blanditiis et!</p>
+                <p class="pOne">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus excepturi, vitae debitis veniam itaque, nulla ipsam repudiandae voluptas explicabo vel quasi sit illo ullam saepe sapiente illum ipsum distinctio! Nisi assumenda, illo ipsa laboriosam facere voluptates amet quis nesciunt quasi eum odio sed, esse sit, officiis non blanditiis et!</p>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur non facere sequi placeat ducimus nulla ut aliquid quae quisquam maxime beatae soluta temporibus, qui laborum exercitationem corporis tempore vel eius.</p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h3>Second section</h3>
+                <ul>
+                    <li>One</li>
+                    <li>Two</li>
+                </ul>
             </div>
         </section>
     </main>
