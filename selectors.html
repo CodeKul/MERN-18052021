@@ -42,8 +42,8 @@
      /* Combinator Selectors - 
      1)descendant selector - space
      2)child selector - >
-     3)adjacent sibling - +
-     4)general sibling - ~ */
+     3)adjacent sibling - + 
+     4)general sibling - ~ */ 
 
     .section1 div ul li span{
         border:2px solid blueviolet;
@@ -62,9 +62,29 @@
         border: 2px solid red;
     } */
 
-    .ulist ul{
-        display:inline-flex;
-        /* justify-content: space-between; */
+    /* .ulist {
+        display:flex;
+        justify-content: space-between;
+    } */
+
+    .divOne > h3{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .divTwo + p{
+        font-weight: bold;
+    }
+
+    .divTwo .pThree{
+        border:3px solid red;
+    }
+
+    .ulist p ~ ul{
+        font-size: 20px;
+    }
+
+    .ulist h3 ~ span{
+        background-color: burlywood;
     }
 
     </style>
@@ -76,8 +96,17 @@
     <main>
         <section class="section1">
             <div class="divOne">
-              <h3 id="subheading1" class="heading3">Learning Selectors</h3>
-              <div class="ulist">
+                <h3 id="subheading1" class="heading3">Learning Selectors</h3>
+                <div class="ulist">
+                <p>Inside p</p>
+                <ul>
+                    <h3>Types of Selectors</h3>
+                    <li><span>basic Selectors</span></li>
+                    <li>Descendent Selector</li>
+                    <li>Attribute Selector</li>
+                    <li>Pseudo Class</li>
+                    <li>Pseudo elements</li>
+                </ul>
                 <ul>
                     <li><span>basic Selectors</span></li>
                     <li>Descendent Selector</li>
@@ -85,7 +114,6 @@
                     <li>Pseudo Class</li>
                     <li>Pseudo elements</li>
                 </ul>
-
                 <ul>
                     <li><span>basic Selectors</span></li>
                     <li>Descendent Selector</li>
@@ -93,20 +121,18 @@
                     <li>Pseudo Class</li>
                     <li>Pseudo elements</li>
                 </ul>
-                <ul>
-                    <li><span>basic Selectors</span></li>
-                    <li>Descendent Selector</li>
-                    <li>Attribute Selector</li>
-                    <li>Pseudo Class</li>
-                    <li>Pseudo elements</li>
-                </ul>
+                <h3>Inside H3</h3>
+                <span>Inside span</span>
+                <span>Second Span</span>
+                </div>
             </div>
-            </div>
-            <div>
+            <div class="divTwo">
                 <h3 id="subheading2" class="heading3">Description</h3>
                 <p class="pOne">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus excepturi, vitae debitis veniam itaque, nulla ipsam repudiandae voluptas explicabo vel quasi sit illo ullam saepe sapiente illum ipsum distinctio! Nisi assumenda, illo ipsa laboriosam facere voluptates amet quis nesciunt quasi eum odio sed, esse sit, officiis non blanditiis et!</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur non facere sequi placeat ducimus nulla ut aliquid quae quisquam maxime beatae soluta temporibus, qui laborum exercitationem corporis tempore vel eius.</p>
+                <p class="pTwo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur non facere sequi placeat ducimus nulla ut aliquid quae quisquam maxime beatae soluta temporibus, qui laborum exercitationem corporis tempore vel eius.</p>
+                <p class="pThree">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dolorum facilis, aspernatur explicabo cupiditate at deleniti iure voluptate quae earum quaerat fugiat id corporis architecto, numquam eum dolor veniam optio minima laboriosam velit! Corporis maiores incidunt ipsa, quaerat id illum!</p>
             </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem recusandae dignissimos, quaerat aliquid at porro error doloremque nulla tempore est! Eius ex, culpa voluptatum et quam quibusdam odio voluptatibus maiores fuga, maxime temporibus? Dolore eum enim labore, sint autem harum, doloremque non dolorum earum ducimus iusto quisquam temporibus suscipit?</p>
         </section>
 
         <section>

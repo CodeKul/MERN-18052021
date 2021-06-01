@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading{
+            text-align: center;
+        }
+        .list{
+            border:2px solid navy;
+        }
+        /* 
+        Attribute Selectors
+        [attribute],
+        [attribute=value],
+        [attribute ^= value] - begins with,
+        [attribute $= value] -end with,
+        [attribute *= value] -substring match
+         */
+
+        /* Pseudo Classes
+        :link,:hover,:visited,:active,:focus,
+        :first-child,:last-child,:nth-child(),nth-last-child(),only-child
+        :first-of-type,:last-of-type,:nth-of-type(),only-of-type
+        */
+
+
+        /* [href]{
+            color:olive;
+            background-color: black;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        [href = "contact.html"]{
+            color:white;
+            background-color: chocolate;
+        } */
+        [class ^="head"]{
+            color:navy;
+        }
+        [type $="are"]{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        [id *= "On"]{
+            font-size: 30px;
+        }
+        .list ul li{
+            margin-bottom:25px;
+        }
+
+        a:link{
+            color:yellowgreen;
+        }
+        a:visited{
+            color:red;
+        }
+        a:hover{
+            color:green;
+        }
+        h2:hover{
+            color:lightseagreen;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="heading">Attribute Selectors</h2>
+    <div class="list">
+        <ul type="square">
+            <li>One</li>
+            <li>Two</li>
+            <li><a href="contact.html">Three</a></li>
+            <li><a href="basics.html">Four</a></li>
+        </ul>
+    </div>
+    <p id="pOne">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, fugit. Nulla omnis voluptas aspernatur ipsa qui, obcaecati labore, consequuntur repellendus fugiat ipsum molestiae veritatis facere fuga autem esse cumque ut, magni saepe distinctio! Tempore corporis aspernatur, facere tenetur commodi debitis sed eligendi qui amet dicta velit ab earum autem odit?</p>
+
+    <a href="http://www.codekul.com">Codekul</a>
+</body>
+</html>
