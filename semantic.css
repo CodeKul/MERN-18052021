@@ -1,0 +1,61 @@
+*{
+    /* all elements in body tag */
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  /* border:1px solid red; */
+  width: 100%;
+}
+header {
+  width: 100%;
+  /* border:2px solid blue; */
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  background-color: black;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  color: olive;
+}
+
+nav ul li button {
+  border: none;
+  padding: 8px;
+  background-color: olive;
+  color: white;
+  border-radius: 5px;
+}
+
+nav ul li button:hover {
+  cursor: pointer;
+}
+
+.heading {
+  text-align: center;
+}
+
+main .eLearning {
+  text-align: center;
+}
+main .eLearning img {
+  width: 100%;
+}
+
+main .eLearning figcaption {
+  text-align: left;
+  font-weight: bold;
+}

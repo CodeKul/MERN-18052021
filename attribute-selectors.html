@@ -27,6 +27,9 @@
         :first-of-type,:last-of-type,:nth-of-type(),only-of-type
         */
 
+        /* Pseudo-Elements
+        ::after,::before,::first-letter,::first-line,::marker,::selection */
+
 
         /* [href]{
             color:olive;
@@ -65,20 +68,182 @@
         h2:hover{
             color:lightseagreen;
         }
+
+        .btn{
+            background-color: lightseagreen;
+            color:white;
+            padding:12px;
+            border:none;
+            border-radius: 6px;
+        }
+
+        .btn:hover{
+            cursor:pointer;
+            background-color: seagreen;
+            letter-spacing: 4px;
+        }
+
+        a:active{
+            color:yellow;
+        }
+
+        #name:focus{
+            background-color: lightskyblue;
+            border:3px solid red;
+            
+        }
+
+       input:hover{
+            outline:2px solid olivedrab;
+        }
+
+        .ulist li:first-child{
+            color:palevioletred;
+        }
+        
+        .ulist li:last-child{
+            color:slateblue;
+        }
+
+        .divTwo p:first-child{
+            border:2px solid gray;
+            border-radius: 6px;
+            background-color: skyblue;
+        }
+
+        .ulist li a:nth-child(3){
+            color:aqua;
+        }
+
+        .ulist li:nth-last-child(2){
+            background-color: aquamarine;
+            padding:6px;
+        }
+
+        ul:only-child{
+            background: lightsteelblue;
+        }
+
+        .divTwo h3:first-child{
+            background-color: mediumturquoise;
+        }
+
+        .divTwo h3:first-of-type{
+            background-color: mediumvioletred;
+        }
+        
+
+        .divTwo p:last-child{
+            background-color: midnightblue;
+            color:white;
+        }
+
+        /* .divTwo p:last-of-type{
+            background-color: midnightblue;
+            color:white;
+        } */
+
+       .divTwo h3:nth-of-type(2){
+           background-color: sandybrown;
+           padding:10px;
+       }
+       
+       .divTwo span:only-of-type{
+           border:2px solid sienna;
+
+       }
+
+       .list-one li::after{
+            content:"->";
+            margin-left:10px;
+       }
+
+       /* .div-last p::before{
+           content:"Note:-";
+           background-color: cornflowerblue;
+           padding:10px;
+       } */
+
+       .list-one li::marker{
+           content:"\2192";
+       }
+
+       /* .div-last p::before{
+           content:"\2192";
+       } */
+
+       .firstP::first-letter{
+           font-size: 30px;
+           color:darkgreen;
+           /* margin:15px;
+           padding:12px; */
+           background-color: darksalmon;
+           border:1px solid black;
+       }
+
+       .secondP::first-line{
+           font-weight: bold;
+       }
+
+       .spanOne::selection{
+            background-color: olive;
+            color:white;
+            
+       }
+
     </style>
 </head>
 <body>
-    <h2 class="heading">Attribute Selectors</h2>
     <div class="list">
-        <ul type="square">
+        <h2>List</h2>
+        <ul type="square" class="ulist">
             <li>One</li>
             <li>Two</li>
+            <li>Third child</li>
             <li><a href="contact.html">Three</a></li>
             <li><a href="basics.html">Four</a></li>
+            <li>Five</li>
+            <li>Six</li>
         </ul>
+
     </div>
+    <h2 class="heading">Attribute Selectors</h2>
+    
     <p id="pOne">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, fugit. Nulla omnis voluptas aspernatur ipsa qui, obcaecati labore, consequuntur repellendus fugiat ipsum molestiae veritatis facere fuga autem esse cumque ut, magni saepe distinctio! Tempore corporis aspernatur, facere tenetur commodi debitis sed eligendi qui amet dicta velit ab earum autem odit?</p>
 
-    <a href="http://www.codekul.com">Codekul</a>
+    <a href="http://www.codekul.com">Codekul</a><br><br>
+
+    <label for="name">Enter your name</label>
+    <input type="text" id="name">
+    <input type="text" id="city">
+    <button class="btn">Read More</button>
+
+    <div class="divTwo">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor iusto itaque sunt nostrum. Nesciunt rerum temporibus, repellat eveniet nisi saepe?</p>
+        <h3>H3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit expedita consequuntur autem earum rem veniam unde accusamus magni eaque. Quibusdam mollitia eius ipsam at iste?</p>
+        <h3>second H3</h3>
+        <span>Inside span</span>
+        <h3>Third h3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, vitae.</p>
+    </div>
+
+    <div class="div-last">
+        <h2>Pseudo Elements</h2>
+        <p class="firstP">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias possimus laudantium, a dolore reprehenderit accusamus laborum debitis consequatur esse ut, provident nisi ullam amet ipsam modi fugiat vitae sit. Esse repellat ipsam vel quaerat consequuntur magni labore iure, enim tenetur.</p>
+        <ul class="list-one">
+            <li>List 1</li>
+            <li>List 2</li>
+            <li>List 3</li>
+        </ul>
+        <p class="secondP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dignissimos vel maxime libero ullam laboriosam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat obcaecati quisquam omnis animi illum doloribus at, repudiandae inventore! Enim voluptatum et omnis magnam harum, debitis fugit doloremque quia expedita repellendus? Nemo consequuntur incidunt dolor provident hic esse ex odio sint fugiat illo. Nesciunt repellendus debitis, eum voluptate suscipit perspiciatis ratione!</p>
+
+        <span class="spanOne">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus laudantium debitis nisi exercitationem fugit voluptatem incidunt eum, perspiciatis sequi tempore enim asperiores facere, possimus distinctio id quam consequuntur eligendi deleniti nemo fuga minus molestiae! Eaque est nemo itaque. Nemo porro debitis ex culpa laboriosam ea?</span>
+    </div>
+
+
+
 </body>
 </html>

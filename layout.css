@@ -12,7 +12,7 @@ nav {
   background: gray;
 }
 
-.navbar {
+/* .navbar {
   list-style-type: none;
 
   display: flex;
@@ -21,6 +21,10 @@ nav {
   top: 25%;
   padding-right: 70px;
   
+} */
+
+.navbar li{
+  display: inline;
 }
 
 .navbar > li > a {
