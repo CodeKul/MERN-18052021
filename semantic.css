@@ -1,5 +1,5 @@
-*{
-    /* all elements in body tag */
+* {
+  /* all elements in body tag */
 }
 
 body {
@@ -58,4 +58,30 @@ main .eLearning img {
 main .eLearning figcaption {
   text-align: left;
   font-weight: bold;
+}
+
+.main-section {
+  margin: 30px;
+  display: flex;
+  
+}
+.main-section .one{
+  background-color:black;
+  color:white;
+  padding:5px;
+  border-radius: 6px;
+  margin-right:5px;
+}
+.main-section .two {
+    background-color: lightseagreen;
+    color:white;
+    padding:7px;
+    border-radius: 6px;
+}
+
+.footer{
+  background-color: black;
+  color:white;
+  text-align: center;
+  border:1px solid black;
 }
