@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
+        .container div{
             height:200px;
             width:250px;
             border:2px solid black;
@@ -20,7 +20,9 @@
             flex-wrap:wrap; */
             flex-flow:row wrap;
             justify-content:space-evenly;
-            align-items:flex-end;
+            align-items:flex-start;
+            /* align-content:center ;  use with multiple lines of flex-items  */
+            
         }
 
 
@@ -31,18 +33,69 @@
         flex-direction,flex-wrap(flex-flow)
         child properties - align-self,flex-grow,flex-shrink,flex-basis(flex)
         */
+
+
+    .one{
+        align-self:flex-end;
+        flex-grow:1;
+    }
+
+    .two{
+        align-self: center;
+        flex-grow:3;
+    }
+
+    .secondContainer{
+        display:flex;
+        border:1px solid blue;
+    }
+
+    .secondContainer div{
+        border:1px solid black;
+        width:150px;
+        text-align: center;
+    }
+
+    .secondContainer .a{
+        background-color: cadetblue;
+        /* flex-basis:200px;
+        flex-grow: 1; */
+        /* flex:flex-grow flex-shrink flex-basis; */
+        /* flex:0 1 auto */
+        flex:1 1 200px;
+       
+    }
+
+    .secondContainer .b{
+        background-color: crimson;
+        flex-grow:2;
+
+    }
+
+    .secondContainer .c{
+        background-color: darkcyan;
+        flex-grow:3;
+        flex-shrink: 2;
+    }
     </style>
 </head>
 <body>
-    <section class="container">
-        <div>One</div>
-        <div>Two</div>
-        <div>Three</div>
-        <div>Four</div>
-        <div>Five</div>
-        <div>Six</div>
-        <div>Seven</div>
-        <div>eight</div>
+    <!-- <section class="container"> 
+        <div class="one">One</div>
+        <div class="two">Two</div>
+        <div class="three">Four</div>
+        <div class="four">Three</div>
+        <div class="five">Five</div>
+        <div class="six">Six</div>
+        <div class="seven">Seven</div>
+        <div class="eight">eight</div>
+    </section> -->
+
+
+    <section class="secondContainer">
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
     </section>
 </body>
 </html>
