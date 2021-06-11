@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:flex;
+            margin-left:30%;
+            
+        }
+
+        .item{
+            color:rgb(58, 51, 51);
+            height:350px;
+            width: 200px;
+            margin:10px;
+        }
+        .one{
+            background-color: brown;
+            transition: transform 10s;
+            
+        }
+        .two{
+            background-color: olive;
+        }
+        .three{
+            background-color: lightseagreen;
+            
+        }
+    .one:hover{
+        transform: translateY(200px); 
+        /* transform: translateY(10px);
+        transform:rotateY(60deg);
+        transform:scaleY(1.5);
+        transform:skew(40deg); */
+       
+    }
+    </style>
+</head>
+<body>
+    <!-- transform - translate,rotate,scale,skew -->
+    <!-- transition -transition-property,transition-duration,
+        transition-timing-function(ease,ease-in,linear,ease-out,ease-in-out),transition-delay, -->
+<div class="container">
+    <div class="item one">
+        One
+    </div>
+    <div class="item two">
+        Two
+    </div>
+    <div class="item three">
+        Three
+    </div>
+</div>
+</body>
+</html>
