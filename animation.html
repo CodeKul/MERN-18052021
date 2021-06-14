@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* animation-name,animation-duration,animation-delay,
+        animation-iteration-count,animation-direction,animation-timing-function,
+        animation-fill-mode,animation-play-state */
+        .divOne{
+            background-color: maroon;
+        }
+        .divTwo{
+            background-color: indigo;
+        }
+        .one{
+            width:120px;
+            height:120px;
+            margin:10px;
+            
+            position:relative;
+            animation-name:box;
+            animation-duration:4s; 
+            animation-delay:0s;
+            animation-iteration-count:1;
+            animation-direction:normal;
+            animation-timing-function: ease-in;
+            animation-play-state: running;
+            animation-fill-mode: forwards;
+        }
+        .one:hover{
+            animation-play-state:paused;
+        }
+        /* from -to ,percent */
+        @keyframes box{
+            /* from{background-color: maroon;left:0;top:0}
+            to{background-color: midnightblue;left:200px;top:0} */
+
+            0%{
+                background-color:maroon ;
+                left:0;
+                top:0;
+            }
+            25%{
+                background-color: olivedrab;
+                left:200px;
+                top:0;
+            }
+            50%{
+                background-color: peru;
+                top:200px;
+                left:200px;
+            }
+            75%{
+                background-color: purple;
+                left:0;
+                top:200px;
+            }
+            100%{
+                background-color: green;
+                top:0;
+                left:0;
+            }
+
+           
+        }
+        @keyframes text{
+                
+        }
+    </style>
+</head>
+<body>
+    <div class="one divOne"></div>
+    <div class="one divTwo"></div>
+   
+</body>
+</html>

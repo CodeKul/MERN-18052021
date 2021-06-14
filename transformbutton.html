@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            height:400px;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .card{
+            border: 1px solid black;
+            border-radius: 6px;
+            border-left: 4px solid lightseagreen;
+            padding:8px;
+            width:150px;
+            margin-right:20px;
+            /* box-shadow:h-offset v-offset blur spread color  */
+            box-shadow:4px 4px 2px 1px #888888;
+            transition:transform 1s ;
+        }
+        .card:hover{
+            cursor:pointer;
+            transform:translate(4px,4px);
+            transform:scale(1.1);
+        }
+        .btn{
+            border:none;
+            background-color: lightseagreen;
+            padding:10px;
+            border-radius: 4px;
+            color:white;
+            text-transform:uppercase;
+            cursor:pointer;
+            transition:letter-spacing 1s;
+            
+        }
+        .btn:hover{
+            letter-spacing: 3px;
+            
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="card">
+            <h3>Dolor sit</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta mollitia dignissimos neque ipsum fuga. Deserunt.</p>
+            <button class="btn">View More</button>
+        </div>
+        <div class="card">
+            <h3>Dolor sit</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta mollitia dignissimos neque ipsum fuga. Deserunt.</p>
+            <button class="btn">View More</button>
+        </div>
+        <div class="card">
+            <h3>Dolor sit</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta mollitia dignissimos neque ipsum fuga. Deserunt.</p>
+            <button class="btn">View More</button>
+        </div>
+    </section>
+</body>
+</html>
