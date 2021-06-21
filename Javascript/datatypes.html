@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Datatypes -Primitive --> Number,String,Boolean,undefined
+       //Non-Primitive --> Arrays ,Objects
+
+       //+ --> when used with strings is a concatenation operator
+        let salary =9000.99
+        let city=100 + 100
+        console.log(typeof salary)
+        console.log( city)
+
+        let myInfo = 'My salary is ' + salary
+        console.log(myInfo)
+
+        //template literals -back tik
+        let greeting = `Good Night ${city}`
+        console.log(greeting) 
+        console.log(`Good Night ${city}`)
+
+
+        //boolean -true/false
+        let age = 5
+
+       if(age > 18){
+           console.log("Adult")
+       }else{
+           console.log("Minor")
+       }
+
+       //undefined
+       let myName
+       console.log(typeof myName)
+
+       //null  -- nothing
+       let sal = null
+       sal =600
+       console.log(sal)
+
+       //Arrays - index starts at 0
+       let seasons =[200,400,500,800,city]
+       console.log(seasons[4])
+
+       //Objects --> key-value pairs
+
+       let person = {
+            personName : "abc",
+            city : "Pune"
+       }
+
+       console.log(person.city)
+      
+    </script>
+</body>
+</html>
