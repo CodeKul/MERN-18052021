@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number = 0 
+
+        if(number > 0){
+            console.log(number + " is positive")
+        }else if(number === 0){
+            console.log("The number is 0")
+        }else{
+            console.log("Number is negative")
+        }
+
+
+
+        let subject1 =70
+        let subject2 = 83 
+        const total = 200
+        let percentage = (subject1+subject2)/200*100
+        console.log(percentage)
+        if(percentage>=40 && percentage<60){
+            console.log("Pass")
+        }else if(percentage>=60 && percentage < 70){
+            console.log("First Class")
+        }else if(percentage >=70 && percentage <99){
+            console.log("Distinction")
+        }else{
+            console.log("Fail")
+        }
+
+
+        //ternary operator - ? :
+        let empId=10
+        let city="Pune"
+        let salary=70000
+
+        if(empId === 100){
+            salary = salary+5000
+            console.log(salary)
+        }else{
+            console.log(salary)
+        }
+
+      //  condn ? "":""
+        empId === 100 ? 
+        city ==="Pune" ? console.log(salary+10000):console.log("City not Pune")  
+        : console.log(salary)
+
+        let x =6
+        function switchExample(){
+        switch(true){
+           case (x>4): 
+                a =10
+               return console.log(a)
+            case (x>0): 
+                console.log("Two")
+                break;
+            case 3: 
+                console.log("Three")
+                break;
+            case 5: 
+                console.log("Five")
+                break
+            default:
+                console.log("Not found")
+        }
+        console.log("After switch inside function")
+    }
+    console.log("After switch outside function")
+    switchExample()
+    console.log("after function call")
+    </script>
+</body>
+</html>
