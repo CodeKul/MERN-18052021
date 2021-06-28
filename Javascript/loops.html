@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //for,while,do..while,continue,for...of,for..in
+
+        //array - add elements of the array
+        //    *
+        //  *   *
+       // *   *   *
+
+        for(let i = 0;i<=5;i++){
+            console.log(i)
+        }
+
+        let j=1
+        while(j<=6){
+            console.log(j)
+            j++
+        }
+
+        let k=1
+        do{
+            console.log(k)
+            k++
+        }while(k<=5)
+
+
+
+        console.log("Continue")
+        for(let x = 1;x<=6;x++){
+
+            if(x == 2){
+                break;
+            }
+            console.log(x)
+        }
+        console.log("After loop")
+
+
+        
+        let numbers=[100,200,400,600,800]
+        // for(let a = 0;a<numbers.length;a++){
+        //     console.log(numbers[a])
+        // }
+
+        //for...of 
+        for(n of numbers){
+            console.log(n)
+        }
+
+        //for..in  //object properties
+        let person={
+            firstName:"abc",
+            city:"Pune"
+        }
+        for(p in person){
+            console.log(p + person[p])
+        }
+
+        let courses = [
+            {
+                courseName:"Java",
+                duration:"3 months",
+                preRequisites:["abc","xyz"],
+                isFullStack:false
+            },
+            {
+                courseName:"CSS",
+                duration:"3 months",
+                preRequisites:["abc","xyz"],
+                isFullStack:false
+            },
+            {
+                courseName:"React",
+                duration:"3 months",
+                preRequisites:["abc","xyz"],
+                isFullStack:false
+            },
+            {
+                courseName:"Node",
+                duration:"3 months",
+                preRequisites:["abc","xyz"],
+                isFullStack:false
+            }
+        ]
+
+        for(c of courses){
+            console.log(c)
+        }
+
+    </script>
+</body>
+</html>
