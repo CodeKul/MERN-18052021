@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        //function statement
+        function add(a=90,b=10) //parameters
+        {
+            console.log(a+b)
+        }
+        add(30,50) //arguments
+        add(300,600)
+        console.log(typeof add)
+
+        //Function Expression
+        let addition = function(a,b){
+            console.log(a+b)
+        }
+        addition(30,50)
+        console.log(typeof addition)
+
+        //arrow functions //fat arrow 
+        let multiply = (a,b)=>console.log(a*b)
+    
+        
+        multiply(10,40)
+        console.log(multiply)
+
+
+        //Hoisting
+        //Variable  and function declarations are hoisted to the top
+        console.log(b)
+        console.log("Hello World")
+        let x =100
+        console.log(x)
+        var b=100
+
+        hello()
+        function hello(){
+            console.log("hello")
+        }
+       
+
+        // var b 
+        // console.log(b)
+        // console.log("Hello World")
+        // let x =100
+        // console.log(x)
+        // function hello(){
+        //     console.log("hello")
+        // }
+        // hello()
+
+
+        //let and const variables are not hoisted
+        // console.log(y)
+        const y =100
+
+
+        // calculate(20,40)
+        // let calculate=function(x,y){
+        //     console.log(x+y-10)
+        // }
+
+        calculation(20,50)
+        const calculation =(x,y)=>{
+            console.log(x+y-10)
+        }
+       
+    </script>
+</body>
+</html>
