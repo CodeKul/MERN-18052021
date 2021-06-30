@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //var , let ,const (ES6 )
+
+      //var - global and local/function scoped
+      //let,const - block scoped
+
+
+      let x ="hello"
+      function greeting(){
+          x="Hi"
+          console.log(x)
+      }
+      console.log(x)
+      greeting()
+      console.log(x)
+
+
+      let city="Pune"
+      function a(){
+        const isActive = true
+        console.log(city , isActive)
+      }
+      a()
+     // console.log(city,isActive)
+
+      function y(){
+          //local variable
+          let z ="blue"
+          console.log(city,z)
+
+          if(z === 'blue'){
+              //block-scoped variable
+              z='red'
+             let skill = 'HTML'
+              console.log(city, z , skill)
+          }
+          console.log(city,z)
+      }
+      y()
+
+
+      firstName = 'abc'
+      function getName(){
+        var lastName = 'xyz'
+      }
+      getName()
+      console.log(lastName)
+    </script>
+</body>
+</html>
