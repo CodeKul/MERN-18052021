@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //length, toString,join,concat,push,pop,shift,unshift,
+        //splice,slice,  
+        //Array iterations = forEach,filter,map
+
+
+        let countries =["India","Japan","USA","China","Uk","Srilanka"]
+        let continents=["Asia","Europe","Austrailia","South America","Antartica"]
+       
+        console.log(countries.length)
+        console.log(countries.toString())
+        console.log(countries.join("@"))
+        let concatenated = countries.concat("North Korea")  //creates a new array
+        console.log(concatenated)
+        console.log(countries)
+
+       continents.push("North America","acb")  //modifies the original array
+        console.log(continents)
+        
+        let x =continents.pop() //returns popped value
+        console.log(x)
+
+        let removed= continents.shift() //removes the first element
+        console.log(removed)
+
+       let z = continents.unshift("Asia","abc","xyz") //returns the length of the array and modifies the original array
+        console.log(continents)
+        console.log(z)
+
+        let seasons =["Summer","Winter","Rainy","Spring","Autumn"]
+        //splice(start index,delete count,new elements to be added(optional))
+        let deletedSeason = seasons.splice(-2,2,"abc","xyz")
+        console.log(seasons)
+        console.log(deletedSeason)
+
+        let skills=["HTML","CSS","Javascript","React","Java","SpringBoot","Bootstrap"]
+        //slice(start,end)
+        let newArray = skills.slice(2,5)
+        let arr = skills.slice(-3)
+        let arroutput = skills.slice(0,-2)
+        console.log(arroutput)
+        console.log(newArray)
+        console.log(skills)
+
+        //forEach(function(){
+
+       // })
+
+       let amount = [10000,4000,9000,200000]
+       let result = amount.forEach(function(element,index){
+            element = element + 100
+           console.log('Amount '+index + ' : '+ element)
+       })
+
+       console.log(amount)
+
+    </script>
+</body>
+</html>
