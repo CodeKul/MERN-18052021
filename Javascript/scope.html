@@ -53,7 +53,42 @@
         var lastName = 'xyz'
       }
       getName()
-      console.log(lastName)
+      //console.log(lastName)
+
+
+
+      var country ="India" //global scope 
+      function display(){
+        var q =100 //function/local scoped
+        console.log(country)
+        if(true){
+          const myName ="abc"
+          var myCity="Pune"
+          console.log(country)
+         // console.log(myName)
+        }
+        //console.log(myName)
+        console.log(myCity)
+      }
+      display()
+
+
+      var country = "India"
+      function show(){
+          country = "Japan"
+          console.log(country)
+      }
+     
+      console.log(country)
+      show()
+      //console.log(q)
+
+
+      if(true){
+        var t =19
+
+      }
+      console.log(t)
     </script>
 </body>
 </html>

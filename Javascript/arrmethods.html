@@ -10,59 +10,106 @@
     <script>
         //length, toString,join,concat,push,pop,shift,unshift,
         //splice,slice,  
-        //Array iterations = forEach,filter,map
+        //Array iterations = forEach,filter,map,reduce,sort,reverse
 
 
-        let countries =["India","Japan","USA","China","Uk","Srilanka"]
-        let continents=["Asia","Europe","Austrailia","South America","Antartica"]
+    //     let countries =["India","Japan","USA","China","Uk","Srilanka"]
+    //     let continents=["Asia","Europe","Austrailia","South America","Antartica"]
        
-        console.log(countries.length)
-        console.log(countries.toString())
-        console.log(countries.join("@"))
-        let concatenated = countries.concat("North Korea")  //creates a new array
-        console.log(concatenated)
-        console.log(countries)
+    //     console.log(countries.length)
+    //     console.log(countries.toString())
+    //     console.log(countries.join("@"))
+    //     let concatenated = countries.concat("North Korea")  //creates a new array
+    //     console.log(concatenated)
+    //     console.log(countries)
 
-       continents.push("North America","acb")  //modifies the original array
-        console.log(continents)
+    //    continents.push("North America","acb")  //modifies the original array
+    //     console.log(continents)
         
-        let x =continents.pop() //returns popped value
-        console.log(x)
+    //     let x =continents.pop() //returns popped value
+    //     console.log(x)
 
-        let removed= continents.shift() //removes the first element
-        console.log(removed)
+    //     let removed= continents.shift() //removes the first element
+    //     console.log(removed)
 
-       let z = continents.unshift("Asia","abc","xyz") //returns the length of the array and modifies the original array
-        console.log(continents)
-        console.log(z)
+    //    let z = continents.unshift("Asia","abc","xyz") //returns the length of the array and modifies the original array
+    //     console.log(continents)
+    //     console.log(z)
 
-        let seasons =["Summer","Winter","Rainy","Spring","Autumn"]
-        //splice(start index,delete count,new elements to be added(optional))
-        let deletedSeason = seasons.splice(-2,2,"abc","xyz")
-        console.log(seasons)
-        console.log(deletedSeason)
+    //     let seasons =["Summer","Winter","Rainy","Spring","Autumn"]
+    //     //splice(start index,delete count,new elements to be added(optional))
+    //     let deletedSeason = seasons.splice(-2,2,"abc","xyz")
+    //     console.log(seasons)
+    //     console.log(deletedSeason)
 
-        let skills=["HTML","CSS","Javascript","React","Java","SpringBoot","Bootstrap"]
-        //slice(start,end)
-        let newArray = skills.slice(2,5)
-        let arr = skills.slice(-3)
-        let arroutput = skills.slice(0,-2)
-        console.log(arroutput)
-        console.log(newArray)
-        console.log(skills)
+    //     let skills=["HTML","CSS","Javascript","React","Java","SpringBoot","Bootstrap"]
+    //     //slice(start,end)
+    //     let newArray = skills.slice(2,5)
+    //     let arr = skills.slice(-3)
+    //     let arroutput = skills.slice(0,-2)
+    //     console.log(arroutput)
+    //     console.log(newArray)
+    //     console.log(skills)
 
         //forEach(function(){
 
        // })
-
+         
        let amount = [10000,4000,9000,200000]
-       let result = amount.forEach(function(element,index){
-            element = element + 100
-           console.log('Amount '+index + ' : '+ element)
+      let output = amount.forEach(function(a,index){
+            a = a + 100
+           // console.log(a)
+            //console.log(element)
        })
+       
+      // result()
+     // console.log(a)
+       //console.log(amount)
+       //console.log(result)
 
-       console.log(amount)
 
+       //reduce(function(accumulator,currentValue),initialValue)
+       const digits = [5,6,2,1,8,9]
+       let sum=[]
+       console.log(digits)
+       for(let i =0;i<digits.length;i++){
+            digits[i]=digits[i]+100
+       }
+       console.log(digits)
+
+    //   let addition= digits.reduce((acc,currValue)=>acc+currValue,10)
+    //   console.log(addition)
+
+
+    //   let expenditure=[5000,7000,1000,4000]
+    //   let sal = 50000
+
+    //   let saving = expenditure.reduce((acc,currValue)=>acc - currValue,sal)
+    //    console.log(saving)
+
+    //    //map((element)=>) , returns a new array
+
+    //    // let amount = [10000,4000,9000,200000]
+    //    result = amount.map((item)=>item+100)
+    //    console.log(result)
+    //    console.log(amount)
+
+
+    //filter((item)=>) ,returns a new array of filtered elements
+    let numberList=[100,-6,3,-2,10,-10]
+    let positiveNumbers = numberList.filter((item)=>item>0 || item < -6)
+
+    console.log(positiveNumbers)
+       
+    let skills =[
+        {skillName:"HTML",category:"FrontEnd"},
+        {skillName:"CSS",category:"FrontEnd"},
+        {skillName:"Bootstrap",category:"FrontEnd"},
+        {skillName:"Express",category:"Backend"},
+        {skillName:"Node",category:"Backend"},
+    ]
+   let frontEndSkills =  skills.filter((item)=>item.category === "Backend")
+       console.log(frontEndSkills)
     </script>
 </body>
 </html>
