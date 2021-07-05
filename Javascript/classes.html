@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Object literal
+        let x = {
+            personName:"x",
+            id:1,
+            displayInfo:function(){
+                console.log("Person Name : "+ this.personName + " ID : "+this.id)
+            }
+        }
+
+        let y={
+            personName:"y",
+            id:2,
+            displayInfo:function(){
+                console.log("Person Name : "+ this.personName + " ID : "+this.id)
+            }
+
+        }
+        
+        x.displayInfo()
+        y.displayInfo()
+        //classes - object,methods,constructor
+        //constructor - initialize your object
+        //methods - displayPerson() 
+
+
+        
+        class Person{
+            constructor(personName,id){
+                this.personName=personName
+                this.id = id
+            }
+            displayInfo(){
+                console.log("Person Name : "+ this.personName + " ID : "+this.id)
+            }
+
+        }
+
+       
+        let anil = new Person("anil",1)  //personName,id,displayInfo
+        // anil.personName
+        anil.displayInfo()
+        
+        let sunil = new Person("sunil",2)
+        sunil.displayInfo()
+
+
+        class A{
+            // constructor(){
+            //     console.log("in constructor")
+            // }
+
+            show(){
+                console.log("Inside A class show method")
+            }
+        }
+        let a = new A()
+        a.show()
+
+
+
+        class X extends Person{
+            constructor(personName,id,isWorking){
+                super(personName,id)
+                this.isWorking = isWorking
+            }
+            displayPerson(){
+                console.log(this.personName,this.isWorking)
+            }
+        }
+        let obj = new X("x",10,true)
+        obj.displayPerson()
+    </script>
+</body>
+</html>
