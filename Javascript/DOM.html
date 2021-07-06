@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d2 p > span{
+            border:1px solid brown;
+            padding:4px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading1">Heading</h1>
+    <div id="div1" class="d2">
+        <p name="paragraph">Inside p tag <span id="span1">Span</span></p>
+    </div>
+    <div id="div2" class="d2">
+        <p  name="paragraph">Inside p2 tag<span id="span2">Span2</span></p>
+    </div>
+    <div id="div3">
+        <ul class="list" name="listone" id="list">
+            <li>document</li>
+            <li>window</li>
+            <li>screen</li>
+            <li>location</li>
+            <li><i>history</i></li>
+        </ul>
+    </div>
+    <script>
+        // getElementById,getElementsByName,getElementsByClassName
+        //getElementsByTagName,querySelector,querySelectorAll
+        //innerHTML,innerText
+        let x= document.getElementById("heading1")
+        console.log(x)
+        x.innerHTML = "<i>Hello World</i>"
+        let divOne = document.getElementById("div1")
+        console.log(divOne)
+
+        let p = document.getElementsByName("listone")
+        console.log(p)
+
+
+        let divCollection = document.getElementsByClassName("d2")
+        console.log(divCollection)
+
+        let list = document.getElementsByTagName("LI")
+        console.log(list)
+
+        let span = document.querySelectorAll(".d2 p>span")
+       console.log(span)
+    </script>
+</body>
+</html>

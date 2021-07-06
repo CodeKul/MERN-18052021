@@ -1,0 +1,13 @@
+DOM(Document Object Model)
+
+*Methods for finding element in a html file
+getElementById()
+getElementsByName()
+getElementsByClassName()
+getElementsByTagName()
+querySelector()
+querySelectorAll()
+
+*properties to manipulate html elements
+innerHTML
+innerText

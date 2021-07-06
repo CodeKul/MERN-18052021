@@ -55,12 +55,12 @@
 
        // })
          
-       let amount = [10000,4000,9000,200000]
-      let output = amount.forEach(function(a,index){
-            a = a + 100
-           // console.log(a)
-            //console.log(element)
-       })
+    //    let amount = [10000,4000,9000,200000]
+    //   let output = amount.forEach(function(a,index){
+    //         a = a + 100
+    //        // console.log(a)
+    //         //console.log(element)
+    //    })
        
       // result()
      // console.log(a)
@@ -69,13 +69,13 @@
 
 
        //reduce(function(accumulator,currentValue),initialValue)
-       const digits = [5,6,2,1,8,9]
-       let sum=[]
-       console.log(digits)
-       for(let i =0;i<digits.length;i++){
-            digits[i]=digits[i]+100
-       }
-       console.log(digits)
+    //    const digits = [5,6,2,1,8,9]
+    //    let sum=[]
+    //    console.log(digits)
+    //    for(let i =0;i<digits.length;i++){
+    //         digits[i]=digits[i]+100
+    //    }
+    //    console.log(digits)
 
     //   let addition= digits.reduce((acc,currValue)=>acc+currValue,10)
     //   console.log(addition)
@@ -96,20 +96,53 @@
 
 
     //filter((item)=>) ,returns a new array of filtered elements
-    let numberList=[100,-6,3,-2,10,-10]
-    let positiveNumbers = numberList.filter((item)=>item>0 || item < -6)
+//     let numberList=[100,-6,3,-2,10,-10]
+//     let positiveNumbers = numberList.filter((item)=>item>0 || item < -6)
 
-    console.log(positiveNumbers)
+//     console.log(positiveNumbers)
        
-    let skills =[
-        {skillName:"HTML",category:"FrontEnd"},
-        {skillName:"CSS",category:"FrontEnd"},
-        {skillName:"Bootstrap",category:"FrontEnd"},
-        {skillName:"Express",category:"Backend"},
-        {skillName:"Node",category:"Backend"},
-    ]
-   let frontEndSkills =  skills.filter((item)=>item.category === "Backend")
-       console.log(frontEndSkills)
+//     let skills =[
+//         {skillName:"HTML",category:"FrontEnd"},
+//         {skillName:"CSS",category:"FrontEnd"},
+//         {skillName:"Bootstrap",category:"FrontEnd"},
+//         {skillName:"Express",category:"Backend"},
+//         {skillName:"Node",category:"Backend"},
+//     ]
+//    let frontEndSkills =  skills.filter((item)=>item.category === "Backend")
+//        console.log(frontEndSkills)
+
+
+
+       let elements = [25,30,1,770,10,5,50]
+       let arr = [3,5,1,9,6]
+       console.log(elements.sort())
+
+       let list=["abc","bac","xac","ddv","zqw"]
+       console.log(list.sort())
+       console.log(elements.reverse())
+
+       let items =[
+           {
+               productName:"Mouse",
+               price:4000
+           },
+           {
+               productName:"Stylus",
+               price:8000
+           },
+           {
+               productName:"Keyboard",
+               price:1400
+           }
+       ]
+
+    //   (a,b)<0  a,b 
+    //   (a,b)>0  b a 
+    //   (a,b) === 0  no change in the order
+       items.sort((a,b)=>a.price - b.price)
+      
+        console.log(items)
+
     </script>
 </body>
 </html>
