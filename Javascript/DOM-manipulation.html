@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="paragraph" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, numquam repellat doloremque labore iste ut soluta minus velit aut ipsa assumenda voluptatibus odio delectus cum, illo aperiam maxime optio rerum. Aperiam, dicta porro. Iste libero qui quod facere eaque suscipit!</p>
+    </div>
+
+    <script>
+        let p = document.getElementById("paragraph")
+        // p.style.border="2px solid green"
+        // p.style.fontFamily="Cambria"
+        p.style.cssText="border:2px solid green;font-family:Cambria"
+        let attr = p.getAttribute("id")
+
+        console.log(attr)
+        
+
+        p.setAttribute("style","border:1px solid black;color:red")
+        console.log(p)
+
+        let isPresent = p.hasAttribute("style")
+        console.log(isPresent)
+
+        p.removeAttribute("style")
+
+
+    </script>
+</body>
+</html>

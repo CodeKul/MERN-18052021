@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div> -->
+
+    <ul id="list">
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+    </ul>
+    <script>
+        let div = document.createElement('div') //elementnode
+        console.log(div)
+        let text = document.createTextNode("Inside p") //text node
+        let p =document.createElement('p')
+        let divTxt = document.createTextNode("Inside div")
+        let a = document.createElement('a')
+        a.href="classes.html"
+        a.innerText="Click here"
+        a.setAttribute("class","abc def")
+        
+        div.appendChild(a)
+        
+        div.appendChild(p)
+       // p.innerHTML="Inside p"
+        p.appendChild(text)
+        div.appendChild(text)
+        
+        document.body.appendChild(div)
+
+
+        let ul = document.getElementById("list")
+        let li = document.createElement('li')
+        li.innerText="list 5"
+        ul.append(li)
+        
+        let element = ul.firstChild.nextSibling
+        console.log(element)
+
+        ul.insertBefore(li,element)
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <ul>
+       <li id="item">element 1</li>
+       <li>element 2</li>
+       <li>element 3</li>
+   </ul> 
+
+   <ul id="item"><li>element 1</li>
+    <li >element 2</li><li id="two">element 3</li><p>lorem</p></ul> 
+
+    <div id="divOne"><p>lorem ipsum</p></div>
+   <script>
+       //parentElement,children,firstElementChild,lastElementChild,
+       //previousElementSibling,nextElementSibling
+
+       let prnt = document.getElementById("item").parentElement
+       console.log(prnt)
+       prnt.innerHTML="<li>Hello</li> <li>World</li>"
+    
+        let first =document.getElementById("item").children
+        console.log(first)
+
+        let sibling = document.getElementById("two").previousElementSibling
+        console.log(sibling)
+
+        //parentNode,childNodes,firstChild,lastChild,
+        //previousSibling,nextSibling
+
+        let prntNode = document.getElementById("two").parentNode
+        console.log(prntNode)
+
+        let childnodes = document.getElementById("divOne").childNodes
+        console.log(childnodes)
+
+        let firstchild = prntNode.firstChild
+        console.log(firstchild)
+        let lastchild =prntNode.lastChild
+        console.log(lastchild)
+        let psibling = document.getElementById("two").nextSibling
+        console.log(psibling)
+
+   </script>
+</body>
+</html>
