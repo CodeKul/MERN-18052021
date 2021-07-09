@@ -17,6 +17,10 @@
         <li>list 3</li>
         <li>list 4</li>
     </ul>
+    <div>
+        Inside DIV
+    </div>
+
     <script>
         let div = document.createElement('div') //elementnode
         console.log(div)
@@ -40,13 +44,24 @@
 
         let ul = document.getElementById("list")
         let li = document.createElement('li')
-        li.innerText="list 5"
+        li.innerText="insertAfter"
         ul.append(li)
         
         let element = ul.firstChild.nextSibling
         console.log(element)
 
+       // ul.insertBefore(li,element)
+
         ul.insertBefore(li,element)
+        let span = document.createElement('span')
+        span.innerText="Inside Span"
+       // ul.before(span)
+       // ul.after(span)
+
+        ul.append(span)
+
+
+        
     </script>
 </body>
 </html>

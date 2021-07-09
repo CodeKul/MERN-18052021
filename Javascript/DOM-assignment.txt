@@ -1,0 +1,3 @@
+1)Create 3-4 cards with some text.
+2)On the top-right corner of the card add a  closing button.
+3)when the closing button is clicked on a particular card,that card should be removed.

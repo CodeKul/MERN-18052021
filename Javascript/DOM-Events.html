@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- onclick="",onclick=function,addEventListener() -->
+    <!-- <button onclick="alert('I am clicked')">Click ME</button> -->
+    
+    
+    <button id="btn" onCLICK="alert('onclick-attribute')">Click ME</button>
+    <script>
+       function displayAlert(){
+           alert("onclick-DOM property")
+       }
+
+
+       let alertBtn = document.getElementById("btn")
+       alertBtn.onclick=displayAlert
+
+       function showMsg(){
+           alert("Add Event Listener")
+       }
+
+       //addEventListener('click',handlerfunction,capture)
+       alertBtn.addEventListener('click',showMsg)
+       alertBtn.addEventListener('click',function(){
+           alert("another event")
+       })
+
+    </script>
+</body>
+</html>
