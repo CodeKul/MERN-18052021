@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 400px;
+            margin:0 auto;
+        }
+        .card{
+            padding:10px;
+            margin:10px;
+            background-color: lightblue;
+            border-left: 5px solid navy;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card p{
+            padding:10px;
+        }
+
+        .delete-btn{
+            position:relative;
+            left:90%;
+            top:0px;
+           
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem quibusdam sit fuga earum fugiat magni aliquam maiores beatae quis rerum inventore, ex sapiente tempore similique tempora aspernatur, dolorum mollitia non!</p>
+        </div>
+        <div class="card">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus id rem numquam saepe tempore? Cum minima soluta quasi optio sint?
+            </p>
+        </div>
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, labore! Dignissimos eius nisi eos magnam et impedit quae necessitatibus, dolores consequatur excepturi ullam minima reprehenderit!</p>
+        </div>
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, labore! Dignissimos eius nisi eos magnam et impedit quae necessitatibus, dolores consequatur excepturi ullam minima reprehenderit!</p>
+        </div>
+        <div class="card">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, labore! Dignissimos eius nisi eos magnam et impedit quae necessitatibus, dolores consequatur excepturi ullam minima reprehenderit!</p>
+        </div>
+    </div>
+    <script>
+        let cards = document.querySelectorAll(".card")
+        console.log(cards)
+        //for..of
+        for(let c of cards){
+            let p = c.firstElementChild
+            let closeBtn = document.createElement('button')
+            closeBtn.innerText="X"
+            closeBtn.className="delete-btn"
+            p.prepend(closeBtn)
+            closeBtn.addEventListener('click',()=>c.remove())
+            console.log(p)
+        }
+    </script>
+</body>
+</html>
