@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,p,a{
+            padding:15px;
+            display:block;
+            border:2px solid brown;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Event Propagation - Bubbling and Capturing -->
+    <div id="grandParent">GrandParent
+        <p id="parent">Parent
+            <a href="#" id="child">Child</a> 
+        </p>
+    </div>
+    <script>
+        let child = document.getElementById("child")
+        let parent= document.getElementById("parent")
+        let grandParent = document.getElementById("grandParent")
+
+        child.addEventListener('click',()=>{
+            alert("CHILD printed")
+        }) //capturing
+
+        parent.addEventListener('click',(e)=>{
+            alert("PARENT printed")
+            e.stopPropagation()
+        }) //capturing
+
+        grandParent.addEventListener('click',(e)=>{
+            alert("GRANDPARENT printed")
+           
+        }) //capturing
+
+        
+    </script>
+</body>
+</html>
