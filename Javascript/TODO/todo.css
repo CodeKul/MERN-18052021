@@ -1,0 +1,6 @@
+.editinput {
+  display: none;
+}
+.editinput.editmode {
+  display: block;
+}
