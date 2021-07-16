@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       let users=[
+           {userName:"abc",city:"Pune"},
+           {userName:"xyz",city:"Mumbai"}
+        ]
+
+        function getUsers(){
+            setTimeout(()=>{
+                let output=''
+                users.forEach((user)=>{
+                    output += `<li>${user.userName} ${user.city}</li>`
+                })
+                console.log(output)
+                document.body.innerHTML=output
+            },1000)
+            
+        }
+
+        function createUser(newuser,cb){
+            setTimeout(()=>{
+                users.push(newuser)
+                cb()
+            },2000)
+        }
+       
+        createUser({userName:"qaz",city:"Thane"},getUsers)
+        //getUsers()
+   </script> 
+</body>
+</html>

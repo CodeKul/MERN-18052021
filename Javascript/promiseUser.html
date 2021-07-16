@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let users=[
+           {userName:"abc",city:"Pune"},
+           {userName:"xyz",city:"Mumbai"}
+        ]
+
+        function getUsers(){
+            setTimeout(()=>{
+                let output=''
+                users.forEach((user)=>{
+                    output += `<li>${user.userName} ${user.city}</li>`
+                })
+                console.log(output)
+                document.body.innerHTML=output
+            },1000)
+        }
+
+        function createUser(user){
+            return new Promise((resolve,reject)=>{
+                    setTimeout(()=>{
+                        users.push(user)
+
+                        let response = true
+                        if(response){
+                            resolve(getUsers)
+                        }else{
+                            reject("Network Error")
+                        }
+                    },2000)
+            })
+        }
+       let res= createUser({userName:"poiu",city:"Chennai"})
+       console.log(res)
+       res.then(getUsers)
+    //   res
+    //   .then(getUsers)
+    //   .catch((err)=>console.log(err))
+    </script>
+</body>
+</html>

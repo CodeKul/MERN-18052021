@@ -28,17 +28,17 @@
 
         child.addEventListener('click',()=>{
             alert("CHILD printed")
-        }) //capturing
+        },false)
 
         parent.addEventListener('click',(e)=>{
             alert("PARENT printed")
             e.stopPropagation()
-        }) //capturing
+        },false) 
 
         grandParent.addEventListener('click',(e)=>{
             alert("GRANDPARENT printed")
            
-        }) //capturing
+        },false) 
 
         
     </script>

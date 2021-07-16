@@ -74,8 +74,12 @@ function editTodo(e) {
   editInput.classList.toggle("editmode");
   let yes = editInput.classList.contains("editmode");
   console.log(yes);
-  let x = editInput.getAttribute('class')
-  console.log(x)
+  let x = editInput.getAttribute("class");
+  let y = x.split(" ");
+  console.log(y);
+  let z = y.includes("editmode");
+  console.log(z);
+  console.log(x);
   if (!yes) {
     editLabel.innerText = editInput.value;
     editLabel.style.display = "block";
