@@ -31,6 +31,7 @@
 
                         let response = true
                         if(response){
+                            console.log("Created")
                             resolve(getUsers)
                         }else{
                             reject("Network Error")
@@ -38,12 +39,26 @@
                     },2000)
             })
         }
-       let res= createUser({userName:"poiu",city:"Chennai"})
-       console.log(res)
-       res.then(getUsers)
+    //    let res= createUser({userName:"poiu",city:"Chennai"})
+    //    console.log(res)
+    //    res.then(getUsers)
     //   res
     //   .then(getUsers)
     //   .catch((err)=>console.log(err))
+
+
+    //async , await
+    async function userResponse(){
+        console.log("before create user")
+        let x = await createUser({userName:"poiu",city:"Chennai"})
+        console.log("before getUsers")
+        getUsers()
+        console.log("after getUsers")
+    }
+
+    userResponse()
+
+
     </script>
 </body>
 </html>
