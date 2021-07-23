@@ -1,0 +1,23 @@
+*INSTALL NODE  (https://nodejs.org/en/download/)
+1)Create a folder eg-serverapi
+2)Go to that folder using cd in command prompt.  cd serverapi
+
+3)Execute the command =>
+ npm init -y 
+
+(this will create package.json)
+
+4)Install json-server=>
+npm i json-server
+(this will create node-modules folder)
+
+5)create db.json file in the folder
+
+6)In the package.json file add the "start" =>
+"scripts": {
+      "start":"json-server -p 3006 -w db.json"
+  }
+
+7) you can run the server using "npm start" in terminal
+
+
