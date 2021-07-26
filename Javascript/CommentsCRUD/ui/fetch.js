@@ -23,6 +23,7 @@ function sendComment() {
   })
     .then((response) => {
       console.log(response);
+      getComments();
     })
     .catch((err) => {
       console.log(err);
@@ -33,7 +34,103 @@ function getComments() {
   fetch("http://localhost:3000/posts", {
     method: "GET",
     headers: { "Content-type": "application/json" },
-  }).then((res) => {
-    console.log(res.json());
+  })
+    .then((res) => {
+      let output = res.json();
+      console.log(output);
+      //location.reload();
+      return output;
+    })
+    .then((output) => {
+      let outputTable = `<table class="table table-dark">
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Body</th>
+    <th></th>
+    <th></th>`;
+      output.map((item) => {
+        outputTable += `<tr>
+<td>${item.id}</td>
+<td>${item.name}</td>
+<td>${item.email}</td>
+<td>${item.body}</td>
+<td><button type="button" onclick={editData(${item.id})}>Edit</button></td>
+<td><button type="button" onclick={deleteData()}>Delete</button></td>
+</tr>`;
+      });
+      document.getElementById("comments").innerHTML = outputTable;
+    });
+}
+
+function editData(index) {
+  console.log(index);
+  let editForm = document.createElement("form");
+  let editName = document.createElement("input");
+  editName.id = "editname";
+  editName.placeholder = "Name";
+  let editId = document.createElement("input");
+  editId.placeholder = "ID";
+  editId.id = index;
+  editId.className = "idClass";
+  let editEmail = document.createElement("input");
+  editEmail.id = "editemail";
+  editEmail.placeholder = "Email";
+  let editBody = document.createElement("input");
+  editBody.id = "editbody";
+  editBody.placeholder = "Body";
+  let updateBtn = document.createElement("button");
+  updateBtn.innerHTML = "Update";
+  updateBtn.type = "button";
+  // updateBtn.onclick=
+  updateBtn.addEventListener("click", updateRecord);
+  // updateBtn.addEventListener('click',)
+  //append to form
+  editForm.append(editName);
+  editForm.append(editEmail);
+  editForm.append(editBody);
+  editForm.append(editId);
+  editForm.append(updateBtn);
+
+  //append to editSection div
+  document.getElementById("editSection").append(editForm);
+
+  console.log("Edit");
+
+  fetch(`http://localhost:3000/posts/${index}`, {
+    method: "GET",
+    headers: { "Content-type": "application/json" },
+  })
+    .then((res) => {
+      let output = res.json();
+      console.log(output);
+      return output;
+    })
+    .then((output) => {
+      editName.value = output.name;
+      editEmail.value = output.email;
+      editBody.value = output.body;
+      editId.value = output.id;
+    });
+}
+
+function updateRecord() {
+  //PUT,PATCH
+  console.log("inside update");
+  let updatedName = document.getElementById("editname").value;
+  let updatedEmail = document.getElementById("editemail").value;
+  let updatedBody = document.getElementById("editbody").value;
+  let updateId = document.querySelector(".idClass").value;
+  console.log(updateId);
+
+  fetch(`http://localhost:3000/posts/${updateId}`, {
+    method: "PATCH",
+    headers: { "Content-type": "application/json" },
+    body: JSON.stringify({
+      email: updatedEmail,
+    }),
+  }).then((response) => {
+    console.log(response);
+    getComments();
   });
 }
