@@ -56,7 +56,7 @@ function getComments() {
 <td>${item.email}</td>
 <td>${item.body}</td>
 <td><button type="button" onclick={editData(${item.id})}>Edit</button></td>
-<td><button type="button" onclick={deleteData()}>Delete</button></td>
+<td><button type="button" onclick={deleteData(${item.id})}>Delete</button></td>
 </tr>`;
       });
       document.getElementById("comments").innerHTML = outputTable;
@@ -72,6 +72,7 @@ function editData(index) {
   let editId = document.createElement("input");
   editId.placeholder = "ID";
   editId.id = index;
+  editId.setAttribute("disabled", true);
   editId.className = "idClass";
   let editEmail = document.createElement("input");
   editEmail.id = "editemail";
@@ -86,6 +87,9 @@ function editData(index) {
   updateBtn.addEventListener("click", updateRecord);
   // updateBtn.addEventListener('click',)
   //append to form
+  if (document.getElementById("editSection").childElementCount != 0) {
+    document.getElementById("editSection").firstChild.remove();
+  }
   editForm.append(editName);
   editForm.append(editEmail);
   editForm.append(editBody);
@@ -94,7 +98,6 @@ function editData(index) {
 
   //append to editSection div
   document.getElementById("editSection").append(editForm);
-
   console.log("Edit");
 
   fetch(`http://localhost:3000/posts/${index}`, {
@@ -107,10 +110,12 @@ function editData(index) {
       return output;
     })
     .then((output) => {
+      console.log("Inside second then");
       editName.value = output.name;
       editEmail.value = output.email;
       editBody.value = output.body;
       editId.value = output.id;
+      console.log(output);
     });
 }
 
@@ -124,13 +129,31 @@ function updateRecord() {
   console.log(updateId);
 
   fetch(`http://localhost:3000/posts/${updateId}`, {
-    method: "PATCH",
+    method: "PUT",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({
+      name: updatedName,
       email: updatedEmail,
+      body: updatedBody,
     }),
   }).then((response) => {
     console.log(response);
+    document.getElementById("editSection").firstChild.remove();
     getComments();
   });
+}
+
+function deleteData(idx) {
+  let x = confirm("Are you sure?");
+  if (x) {
+    fetch(`http://localhost:3000/posts/${idx}`, {
+      method: "DELETE",
+      headers: { "Content-type": "application/json" },
+    }).then((response) => {
+      console.log(response);
+      getComments();
+    });
+  } else {
+    console.log("Dont delete");
+  }
 }

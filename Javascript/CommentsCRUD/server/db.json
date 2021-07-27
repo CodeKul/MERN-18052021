@@ -1,95 +1,16 @@
 {
   "posts": [
     {
-      "postId": 1,
-      "id": 1,
-      "name": "id labore ex et quam laborum",
-      "email": "Eliseo@gardner.biz",
-      "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
-    },
-    {
       "name": "quo vero reiciendis velit similique earum",
       "email": "Sydney@sydney.com",
-      "body": "est natus enim nihil est dolore omnis voluptatem numquamet omnis occaecati quod ullam atvoluptatem error expedita pariaturnihil sint nostrum voluptatem reiciendis et",
+      "body": "hello",
       "id": 2
-    },
-    {
-      "name": null,
-      "email": null,
-      "body": null,
-      "id": 3
-    },
-    {
-      "name": "xyz",
-      "email": "js@gmail.com",
-      "body": "qaz",
-      "id": 4
-    },
-    {
-      "email": "react@gmail.com",
-      "id": 5
-    },
-    {
-      "postId": "8",
-      "name": "asdf",
-      "email": "css@gmail.com",
-      "body": "qert",
-      "id": 6
-    },
-    {
-      "postId": "",
-      "name": "",
-      "email": "",
-      "body": "",
-      "id": 7
     },
     {
       "name": "Software",
       "email": "abc@gmail.com",
       "body": "Pune",
       "id": 8
-    },
-    {
-      "postId": "",
-      "name": "",
-      "email": "",
-      "body": "",
-      "id": 9
-    },
-    {
-      "postId": "",
-      "name": "",
-      "email": "",
-      "body": "",
-      "id": 10
-    },
-    {
-      "postId": "",
-      "name": "",
-      "email": "",
-      "body": "",
-      "id": 11
-    },
-    {
-      "postId": "",
-      "name": "",
-      "email": "xyz@gmail.con",
-      "body": "",
-      "id": 12
-    },
-    {
-      "postId": "9",
-      "name": "Software",
-      "email": "abc@gmail.con",
-      "body": "qert",
-      "id": 13
-    },
-    {
-      "postId": "9",
-      "name": "JOhn",
-      "email": "john@gmail.com",
-      "body": "lorem ipsum",
-      "id": 14
     }
   ]
 }
