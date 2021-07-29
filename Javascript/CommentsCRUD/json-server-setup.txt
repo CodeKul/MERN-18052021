@@ -8,7 +8,7 @@
 (this will create package.json)
 
 4)Install json-server=>
-npm i json-server
+npm i -g json-server
 (this will create node-modules folder)
 
 5)create db.json file in the folder
