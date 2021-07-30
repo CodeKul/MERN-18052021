@@ -1,46 +1,25 @@
 {
   "user": [
     {
-      "userName": "abc",
-      "email": "abc@gmail.com",
-      "city": "Thane",
+      "userName": "xyz",
+      "email": "xyz@gmail.com",
+      "city": "Pune",
       "message": "lorem",
       "id": 1
     },
     {
-      "userName": "",
-      "email": "",
-      "city": "pune",
-      "message": "",
-      "id": 2
-    },
-    {
-      "userName": "",
-      "email": "",
-      "city": "pune",
-      "message": "qwertyuiop",
-      "id": 3
-    },
-    {
-      "userName": "Sucheta Chaudhari",
+      "userName": "javascript",
       "email": "abc@gmail.com",
-      "city": "mumbai",
-      "message": "qwertyuiop",
+      "city": "Mumbai",
+      "message": "qwerty",
       "id": 4
     },
     {
-      "userName": "test1",
+      "userName": "test",
       "email": "test1@gmail.com",
       "city": "pune",
       "message": "ltem",
       "id": 5
-    },
-    {
-      "userName": "Software",
-      "email": "sbc@gmail.com",
-      "city": "mumbai",
-      "message": "lorem",
-      "id": 6
     },
     {
       "userName": "xyz",
@@ -48,16 +27,6 @@
       "city": "pune",
       "message": "qwert",
       "id": 7
-    },
-    {
-      "userName": "abc",
-      "email": "abc@gmail.com",
-      "city": "pune",
-      "message": "qe",
-      "id": 8
-    },
-    {
-      "id": 9
     },
     {
       "userName": "wsx",
