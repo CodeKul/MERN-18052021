@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //rest parameters  - takes multiple elements and combine into single element
+        //spread syntax/spread operator - expand a single element in to multiple elements
+        let x =['hello','javascript','react']
+
+        function info(a,b,...elements){
+            console.log(a,b,elements)
+        }
+        info(100,'ABC',x,'CSS',300,900)
+
+
+        let skills=['javascript','react','CSS','SpringBoot']
+        function skillInfo(...x){
+            console.log(x)
+
+        }
+        skillInfo('java','mongodb',...skills,'MySQL') //argument
+        let arr=[10,45,29]
+        let arr1=[99,23,87]
+        
+
+        console.log(Math.max(104,...arr,...arr1))
+        // Math.max(10,45,29,99,23,87)
+    </script>
+</body>
+</html>

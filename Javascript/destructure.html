@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       //destructuring  -array and object
+
+       let arr=[1001,'abc','Pune','India']
+       let firstName="XYZ"
+
+       let[empId,empName,...restInfo]=arr
+
+       console.log(restInfo)
+       let [...q]=restInfo
+        console.log(q)
+       let[a,b,c]=firstName
+       console.log(a,b,c)
+       
+       console.log(empId)
+
+
+       obj={key:value,key:value}
+       let studentInfo={
+           name:"ABC",
+           age:20,
+           city:"Pune",
+           contact:'abc@gmail.com'
+       }
+
+        let {name,age,city,contact}=studentInfo
+      
+
+       function displayStudentContact(c){
+            console.log(c)
+       }
+       displayStudentContact(contact) 
+
+       function getBook(){
+           return{
+                bookName:'ABC',
+                author:'XYZ'
+           }
+       }
+       let {bookName,author} = getBook()
+       console.log(author)
+   </script>
+</body>
+</html>
