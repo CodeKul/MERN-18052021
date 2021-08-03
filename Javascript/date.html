@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+
+        new Date()
+        new Date(milliseconds)
+        new Date(string)
+        new Date(year,month,day,hour,min,sec)
+
+
+     -->
+     <script>
+            const currentDate = new Date()
+            console.log(currentDate) 
+
+            const dateValue = new Date(100000000)
+            console.log(dateValue)
+
+            const birthDate=new Date("03-08-2021")  //yyyy-mm-dd ,mm-dd-yyy
+            console.log(birthDate)
+
+            const dt = new Date(2021,8,04,05,50,40,30)
+            console.log(dt)
+
+            //getFullYear,getMonth,getUTC,getDay,getHours,getMinutes,
+            //now
+
+            let x = Date.now()
+            console.log(x)
+
+            let y = new Date(1628004447452)
+            console.log(y)
+
+            // let newDate=new Date().format('mm-dd-yyyy')
+            // let z = newDate.format('mm-dd-yyyy')
+            //console.log(newDate)
+            // let getTodaysDate = newDate.getDay()  //day of week
+            // console.log(getTodaysDate)
+
+          let output =  new Date().toDateString()
+          let result =new Date().toLocaleDateString()
+          let resultDate = new Date()
+          console.log(resultDate)
+
+          let todayDt = new Date()
+        //   let formattedDate = `${todayDt.getMonth()+1}-${todayDt.getDate()}-${todayDt.getFullYear()}`
+          let day = todayDt.getDate() < 10 ? `0${todayDt.getDate()}` : todayDt.getDate()
+          let month = todayDt.getMonth() < 10 ? `0${todayDt.getMonth()+1}` : todayDt.getMonth()+1
+          let year = todayDt.getFullYear()
+          console.log(`${day}-${month}-${year}`)
+
+
+        
+          let dtNew = new Date()
+          dtNew.getTimezoneOffset() 
+          console.log(dtNew.getTimezoneOffset())  //returns minutes from UTC
+       let utcHours =  dtNew.getUTCHours()
+       console.log(utcHours)
+       dtNew.setDate(08)
+       console.log(dtNew)
+
+
+            
+
+
+    </script>
+</body>
+</html>
