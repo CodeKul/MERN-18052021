@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="myinfo"></p>
+        <p id="greeting"></p>
+        <p id="exp"></p>
+        <h4>Skills</h4>
+        <h5 id="mycity"></h5>
+        <ul id="skills">
+
+        </ul>
+        <p id="newcity"></p>
+    </div>
+
+    
+    <script type="module">
+        //named import/export 
+        //default import/export
+        import myInfo,{displayCity} from './myModule.js'
+        import {displayGreeting,calculate,skills,newCity} from './display.js' //named imports
+        let result = myInfo()
+        console.log(result)
+        document.getElementById("myinfo").innerHTML=`Name is ${result.myName} and city is ${result.city}` 
+        let greet= displayGreeting()
+        document.getElementById("greeting").innerHTML=greet
+
+        let [exp1,exp2]= calculate(50,20)
+       document.getElementById("exp").innerHTML=`First expression result is ${exp1}`
+
+       let list=""
+       skills.map((skill,id)=>{
+             list +=  `<li>${skill}</li>`
+       })
+
+       document.getElementById("skills").innerHTML=list
+
+
+    //    let myCity = displayCity()
+    //    document.getElementById("mycity").innerHTML=myCity
+
+       document.getElementById("newcity").innerHTML=newCity
+    </script>
+</body>
+</html>
