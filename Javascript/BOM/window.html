@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- alert(),prompt(),confirm(),open(),close() 
+        innerHeight,innerWidth,outerHeight,outerWidth-->
+
+        <button onclick="showAlert()">Show Alert</button>
+        <button id="openBtn">Open</button>
+        <button id="closebtn">Close</button>
+        <p id="outerheight"></p>
+        <script>
+            function showAlert(){
+                alert("I am an alert")
+            }
+
+        //     let value = prompt("Enter your message","Type here...")
+        //     //alert(value)
+
+        //    let confirmation =  confirm("Are you sure?")
+        //    alert(confirmation)
+            let id
+           document.getElementById("openBtn").addEventListener('click',()=>{
+                id = window.open("https://hackernoon.com/improving-first-time-load-of-a-production-react-app-part-1-of-2-e7494a7c7ab0",'hello',`height=200,width=200,left=400,top=300`)
+                
+           })
+
+           document.getElementById("closebtn").addEventListener('click',()=>{
+           
+            id.close()
+           
+           })
+
+           console.log(innerHeight-innerHeight*60/100)
+
+           console.log("InnerHeight " + window.innerHeight)
+           console.log("InnerWidth " +window.innerWidth)
+           console.log("OuterHeight " +window.outerHeight)
+           console.log("Outerwidth " +window.outerWidth)
+
+           document.getElementById("outerheight").innerHTML=innerHeight-innerHeight*60/100
+        </script>
+</body>
+</html>
