@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Reload the page</button>
+   
+    <button onclick="closeWindow()">Close</button>
+
+    <button onclick="closeW()">Close window</button>
+    <script>
+        // location.href,location.assign,
+        //console.log(location.href)
+       // window.location="https://www.amazon.in/router/s?k=router"
+        // location.assign("https://react-bootstrap.github.io/")
+        //location.href="https://react-bootstrap.github.io/"
+        let windowId
+        let wId
+        btn.addEventListener('click',()=>{
+            windowId=window.open("screen.html",'hello',"height=300,width=300")
+            console.log(windowId)
+        })
+        btn.addEventListener('click',()=>{
+            wId =window.open('location.html','location',"height=300,width=300")
+        })
+      
+
+       function closeW(){
+            wId.close()
+       }
+
+
+function closeWindow(){
+    windowId.close()
+}
+       
+    </script>
+</body>
+</html>

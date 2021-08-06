@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="paragraph"></p>
+
+    <!-- screen-width,height,colorDepth,pixelDepth,orientation ,availHeight,availWidth-->
+    <script>
+        alert("Width "+screen.width + " and Height "+ screen.height)
+        // alert("colorDepth "+screen.colorDepth)
+        // alert("pixelDepth "+screen.pixelDepth)
+        document.getElementById("paragraph").innerHTML=screen.availHeight
+
+        console.log(screen.orientation)
+
+        
+
+    </script>
+</body>
+</html>
