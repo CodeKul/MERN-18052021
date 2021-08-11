@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getUserLocation()">Get Location</button>
+    <script>
+        // appName,online,appCodeName,appVersion,platform,cookieEnabled,javaEnabled,geolocation
+        console.log(navigator.appName)
+        console.log(navigator.onLine)
+        console.log(navigator.appVersion)
+        console.log(navigator.platform)
+        console.log(navigator.userAgentData)
+        console.log(navigator.geolocation)
+        console.log(navigator.cookieEnabled)
+        console.log(navigator.javaEnabled())
+
+       let x = navigator.geolocation
+        console.log(x)
+      let position =   x.getCurrentPosition(display)
+        console.log(position)
+
+        function display(loc){
+            console.log(loc)
+        }
+        display()
+    </script>
+</body>
+</html>
