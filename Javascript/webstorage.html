@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="name"></p>
+    <p id="last"></p>
+    <script>
+
+        //Cookies - 4kb, localstorage - 5mb,sessionstorage-5mb
+        // document.cookie='firstName=test'
+
+        // localStorage.setItem('username','abc')
+         sessionStorage.setItem('lastName','xyz')
+
+       let x = localStorage.getItem('username')
+        document.getElementById('name').innerHTML=x
+
+       
+        document.getElementById('last').innerHTML= sessionStorage.getItem('lastName')
+        sessionStorage.removeItem('lastName')
+
+        localStorage.removeItem('user')
+    </script>
+</body>
+</html>
