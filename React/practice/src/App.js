@@ -1,12 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Counter from './components/Counter';
+import Display from './components/Display';
+import DisplayCity from './components/DisplayCity';
+import Products from './components/Products';
+import Welcome from './components/Welcome';
+//rce -class
+//rfce - function
 function App() {
   return (
     <div className="App">
-      <p>
-      ets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to
-      </p>
+      {/* <Display/>
+      <Products tablename="Products Table"/>
+      <Welcome username="ABC" userid={100}/> */}
+      
+      <DisplayCity/>
+      <Counter incBy={4}/>
     </div>
   );
 }

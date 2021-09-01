@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <h1>Inside Render function</h1>,
+  <App/>,
   document.getElementById('root')
 );
 //render(what to render,where to render)
