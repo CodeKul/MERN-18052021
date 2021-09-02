@@ -5,6 +5,8 @@ import Display from './components/Display';
 import DisplayCity from './components/DisplayCity';
 import Products from './components/Products';
 import Welcome from './components/Welcome';
+import P from './components/P'
+import ReactFragment from './components/ReactFragment';
 //rce -class
 //rfce - function
 function App() {
@@ -12,10 +14,16 @@ function App() {
     <div className="App">
       {/* <Display/>
       <Products tablename="Products Table"/>
-      <Welcome username="ABC" userid={100}/> */}
+     */}
       
-      <DisplayCity/>
+      {/* <DisplayCity/>
       <Counter incBy={4}/>
+
+      <Welcome username="ABC" userid={100}/>  */}
+
+      <P/>
+
+      <ReactFragment/>
     </div>
   );
 }

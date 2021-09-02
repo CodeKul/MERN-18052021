@@ -1,13 +1,13 @@
 import React from 'react'
 
-function Welcome(props) {
+function Welcome({username,userid}) {
 
-    console.log(props)
+    //  console.log(props)
     // props.username="poq"
     return (
         <div>
-            <h1>Welcome {props.username}</h1>
-            <h3>Your id is {props.userid}</h3>
+            <h1>Welcome {username}</h1>
+            <h3>Your id is {userid}</h3>
         </div>
     )
 }
