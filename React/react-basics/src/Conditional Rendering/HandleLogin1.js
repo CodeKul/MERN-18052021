@@ -26,7 +26,7 @@ export class HandleLogin1 extends Component {
 
                 <Login handleLogin={this.login}/>}
 
-                <ShowLoginStatus a={this.state.isLoggedIn}/>
+                <ShowLoginStatus isLoggedIn={this.state.isLoggedIn}/>
             </div>
         )
     }

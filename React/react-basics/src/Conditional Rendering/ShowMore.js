@@ -119,7 +119,7 @@ export class ShowMore extends Component {
                     <div className="text-center mt-3">
                         <button className="btn btn-success" onClick={this.toggleShowMore} style={this.state.showMore? btnStyle : {}}>
                             {this.state.showMore?"Show Less":"Show More"}
-                            </button>
+                        </button>
                     </div>
 
                 </div>
