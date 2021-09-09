@@ -9,9 +9,7 @@ export class ComponentLifecycle extends Component {
         this.state = {
             message:"Welcome" 
         }
-
         console.log("Inside constructor")
-
     }
     // api/customers/getbyId/id
     componentDidMount(){
