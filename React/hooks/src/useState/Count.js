@@ -10,8 +10,8 @@ function Count() {
     
     let increment=()=>{
         // setCount(count+1)
-       setCount((p)=>p+1)
-       setCount((p)=>p+1)
+       setCount((p)=>p+1) //1
+       setCount((p)=>p+1)//2
 
     }
    
