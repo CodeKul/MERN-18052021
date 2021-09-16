@@ -6,22 +6,41 @@ import EffectDemo2 from './useEffect/EffectDemo2';
 import RefDemo from './useRef/RefDemo';
 import NoRerender from './useRef/NoRerender';
 import StopWatch from './useRef/StopWatch';
+import Parent from './useContext/Parent';
+import { createContext } from 'react'
+import Content from './useContext/Content';
+
+export const userContext = createContext()
+
 function App() {
+  let username = "test"
   return (
     <div>
-      {/* <Count/>
+      {/* useState
+      <Count/>
       <HandleLogin/>
       <ArrayState/> */}
-        {/* <EffectDemo2/> */}
 
-        {/* <RefDemo/> */}
-{/* 
-        <NoRerender/> */}
+      {/* useEffect
+      <EffectDemo2/> */}
 
-        <StopWatch/>
-      
+
+      {/* useRef
+        <RefDemo/>
+        <NoRerender/>
+        <StopWatch/> */}
+        <h1>App Component</h1>
+       {/* <Parent username={username}/>  */}
+
+        <userContext.Provider value={username}>
+            <Parent/>
+            <Content/>
+        </userContext.Provider>
+
     </div>
   );
 }
-
+//1)createContext()
+//2)Provider - value
+//3)useContext
 export default App;
