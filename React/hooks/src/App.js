@@ -8,8 +8,9 @@ import NoRerender from './useRef/NoRerender';
 import StopWatch from './useRef/StopWatch';
 import Parent from './useContext/Parent';
 import { createContext } from 'react'
-import Content from './useContext/Content';
-
+import Content from './useContext/Theme-context/Content';
+import Navbar from './useContext/Theme-context/Navbar';
+import DarkThemeProvider from './useContext/Theme-context/ThemeToggleProvider'
 export const userContext = createContext()
 
 function App() {
@@ -29,13 +30,20 @@ function App() {
         <RefDemo/>
         <NoRerender/>
         <StopWatch/> */}
-        <h1>App Component</h1>
+       
        {/* <Parent username={username}/>  */}
 
-        <userContext.Provider value={username}>
+        {/* <userContext.Provider value={username}>
             <Parent/>
             <Content/>
-        </userContext.Provider>
+        </userContext.Provider> */}
+
+      {/* 3 */}
+
+        <DarkThemeProvider> 
+            <Navbar/>
+            <Content/>
+        </DarkThemeProvider>
 
     </div>
   );

@@ -1,0 +1,42 @@
+.navbar-container{
+    border:1px solid gray;
+}
+.navbar-container ul{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    list-style:none;
+    
+}
+
+.navbar-container ul li{
+    margin:15px;
+}
+
+
+.navbar-dark{
+    background-color: #333;
+    color:rgb(185, 171, 171);
+}
+
+.navbar-light{
+    background-color: rgb(236, 236, 234);
+    color:#333;
+}
+
+.navbar-button{
+    background-color: rgb(8, 8, 32);
+    color:white;
+}
+
+.content-dark{
+    background-color: #333;
+    color:rgb(185, 171, 171);
+}
+
+.content-light{
+    background-color: rgb(236, 236, 234);
+    color:#333;
+}
+
